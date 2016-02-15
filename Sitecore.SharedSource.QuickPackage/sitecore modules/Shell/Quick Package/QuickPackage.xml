@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <QuickPackage>
+    <FormDialog ID="Dialog" Header="Quick Package" Text="Create quick package. Uncheck 'Include descendants' checkbox if you don't want to include descendant items." OKButton="Create">
+
+      <CodeBeside Type="Sitecore.SharedSource.QuickPackage.Dialogs.QuickPackageForm, Sitecore.SharedSource.QuickPackage"/>
+
+      <Stylesheet Src="Content Manager.css" DeviceDependant="true"/>
+      <Script Src="/sitecore/shell/Applications/Content Manager/Content Editor.js"/>
+
+      <Script Src="/sitecore/shell/Controls/Lib/jQuery/jquery-1.10.0.min.js"/>
+      <script type="text/javascript">jQuery.noConflict();</script>
+
+      <Border Width="100%" Padding="0 0 10px">
+        <Border Width="100px" Padding="7px 0 0 0" Float="left">
+          <Literal Text="Package name:" /> 
+        </Border>
+        <Border Width="420px" Float="left">
+          <Edit ID="PackageName" />
+        </Border>
+        <Border Clear="both" Float="none" />
+      </Border>
+
+      <Border Width="100%" Padding="0">
+        <Checkbox ID="IncludeDescendants" Checked="true" Header="Include descendants" />
+      </Border>
+
+    </FormDialog>
+  </QuickPackage>
+</control>
